@@ -1,0 +1,250 @@
+@use "mixin";
+@use "variables";
+
+@font-face {
+  font-family: Ubuntu Regular;
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu Medium;
+  src: url(../fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu Light;
+  src: url(../fonts/Ubuntu-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  @include mixin.text(
+    center,
+    variables.$text-color,
+    8rem,
+    "Ubuntu Regular",
+    1vh
+  );
+}
+
+h2 {
+  @include mixin.text(
+    center,
+    variables.$color-dark-brown,
+    4.5rem,
+    "Ubuntu Medium",
+    2vh
+  );
+}
+
+h3 {
+  @include mixin.text(
+    center,
+    variables.$text-color,
+    4rem,
+    "Ubuntu Regular",
+    1vh
+  );
+}
+
+p {
+  @include mixin.text(
+    center,
+    variables.$text-color,
+    variables.$font-size-regular,
+    "Ubuntu Regular",
+    4vh
+  );
+}
+
+header {
+  nav {
+    @include mixin.flex(flex, column, nowrap, center, center, 4vh, 4vh);
+
+    a {
+      @include mixin.link(
+        center,
+        variables.$color-dark-brown,
+        variables.$font-size-regular,
+        "Ubuntu Medium",
+        none
+      );
+    }
+  }
+}
+
+.button-1 {
+  @include mixin.button(
+    center,
+    variables.$text-color,
+    variables.$font-size-regular,
+    "Ubuntu Medium",
+    none,
+    variables.$color-light-brown,
+    1.6rem 4rem 1.6rem 4rem,
+    0.6rem,
+    none
+  );
+}
+
+.button-header {
+  @include mixin.button(
+    center,
+    variables.$text-color,
+    variables.$font-size-regular,
+    "Ubuntu Medium",
+    none,
+    variables.$color-light-brown,
+    1.6rem 6rem 1.6rem 6rem,
+    0.6rem,
+    uppercase
+  );
+}
+
+.welcome {
+  background-image: url(../img/hero_image.png);
+  background-position: center;
+  background-size: cover;
+  @include mixin.flex(flex, column, nowrap, center, center, 30vh, 10vh);
+}
+
+.logo {
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+}
+
+.facility-card-container {
+  margin: auto;
+  width: 60vw;
+  @include mixin.flex(flex, row, nowrap, center, space-between, none, 2vh);
+}
+
+.facility-card {
+  @include mixin.flex(flex, column, nowrap, center, center, none, 2vh);
+  p {
+    @include mixin.text(
+      center,
+      variables.$color-dark-brown,
+      variables.$font-size-regular,
+      "Ubuntu Medium",
+      1.6rem
+    );
+  }
+}
+
+.rooms {
+  padding-left: variables.$padding-sides;
+  padding-right: variables.$padding-sides;
+}
+
+.rooms-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+.room-card {
+  background-image: url(../img/standard_twin_room.png);
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  border-radius: 0.8rem;
+
+  @include mixin.flex(flex, column, nowrap, center, flex-start, 24vh, 0%);
+}
+
+.room-card:nth-of-type(2) {
+  background-image: url(../img/standard_room.png);
+}
+
+.room-card:nth-of-type(3) {
+  background-image: url(../img/standard_view_room.png);
+}
+
+.room-card:nth-of-type(4) {
+  background-image: url(../img/deluxe_room.png);
+}
+
+.get-room {
+  @include mixin.flex(flex, column, nowrap, center, center, 8vh, 8vh);
+}
+
+footer {
+  background-color: variables.$footer-bg-color;
+  padding-left: variables.$padding-sides;
+  padding-right: variables.$padding-sides;
+  padding-bottom: 4vh;
+  padding-top: 4vh;
+}
+
+.footer-wrapper {
+  @include mixin.flex(flex, row, nowrap, flex-start, space-between, 0, 0);
+}
+
+.contact {
+  @include mixin.flex(flex, column, nowrap, flex-start, flex-start, 0, 0);
+
+  img {
+    padding-bottom: 4vh;
+  }
+}
+
+.contact p {
+  @include mixin.text(
+    center,
+    variables.$text-color,
+    variables.$font-size-regular,
+    "Ubuntu Light",
+    0
+  );
+}
+
+.footer-links {
+  @include mixin.flex(flex, column, nowrap, flex-start, ´center, 0, 0);
+  a {
+    @include mixin.link(
+      left,
+      variables.$text-color,
+      variables.$font-size-regular,
+      "Ubuntu Regular",
+      none
+    );
+    padding-bottom: 2vh;
+  }
+}
+
+form {
+  width: 30vw;
+  background-color: aqua;
+}
+
+input[type="email"],
+input[type="submit"] {
+  width: 100%;
+  border: none;
+  margin-bottom: 2vh;
+}
+
+input[type="email"] {
+  @include mixin.text(
+    left,
+    #000000,
+    variables.$font-size-regular,
+    "Ubuntu Light",
+    0
+  );
+  padding: 1rem;
+}
