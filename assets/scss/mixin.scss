@@ -6,15 +6,7 @@
   padding-bottom: $padding-bottom;
 }
 
-@mixin flex(
-  $display,
-  $flex-direction,
-  $flex-wrap,
-  $align-items,
-  $justify-content,
-  $padding-top,
-  $padding-bottom
-) {
+@mixin flex($display, $flex-direction, $flex-wrap, $align-items, $justify-content, $padding-top, $padding-bottom) {
   display: $display;
   flex-direction: $flex-direction;
   flex-wrap: $flex-wrap;
@@ -32,17 +24,7 @@
   text-decoration: $text-decoration;
 }
 
-@mixin button(
-  $text-align,
-  $color,
-  $font-size,
-  $font-family,
-  $text-decoration,
-  $background-color,
-  $padding,
-  $border-radius,
-  $text-transform
-) {
+@mixin button($text-align, $color, $font-size, $font-family, $text-decoration, $background-color, $padding, $border-radius, $text-transform) {
   text-align: $text-align;
   color: $color;
   font-size: $font-size;

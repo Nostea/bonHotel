@@ -31,43 +31,19 @@ html {
 }
 
 h1 {
-  @include mixin.text(
-    center,
-    variables.$text-color,
-    8rem,
-    "Ubuntu Regular",
-    1vh
-  );
+  @include mixin.text(center, variables.$text-color, 8rem, "Ubuntu Regular", 1vh);
 }
 
 h2 {
-  @include mixin.text(
-    center,
-    variables.$color-dark-brown,
-    4.5rem,
-    "Ubuntu Medium",
-    2vh
-  );
+  @include mixin.text(center, variables.$color-dark-brown, 4.5rem, "Ubuntu Medium", 2vh);
 }
 
 h3 {
-  @include mixin.text(
-    center,
-    variables.$text-color,
-    4rem,
-    "Ubuntu Regular",
-    1vh
-  );
+  @include mixin.text(center, variables.$text-color, 4rem, "Ubuntu Regular", 1vh);
 }
 
 p {
-  @include mixin.text(
-    center,
-    variables.$text-color,
-    variables.$font-size-regular,
-    "Ubuntu Regular",
-    4vh
-  );
+  @include mixin.text(center, variables.$text-color, variables.$font-size-regular, "Ubuntu Regular", 4vh);
 }
 
 header {
@@ -75,13 +51,8 @@ header {
     @include mixin.flex(flex, column, nowrap, center, center, 4vh, 4vh);
 
     a {
-      @include mixin.link(
-        center,
-        variables.$color-dark-brown,
-        variables.$font-size-regular,
-        "Ubuntu Medium",
-        none
-      );
+      @include mixin.link(center, variables.$color-dark-brown, variables.$font-size-regular, "Ubuntu Medium", none);
+      padding-right: 2vw;
     }
   }
 }
@@ -118,6 +89,7 @@ header {
   background-image: url(../img/hero_image.png);
   background-position: center;
   background-size: cover;
+  margin-bottom: 5vh;
   @include mixin.flex(flex, column, nowrap, center, center, 30vh, 10vh);
 }
 
@@ -135,13 +107,7 @@ header {
 .facility-card {
   @include mixin.flex(flex, column, nowrap, center, center, none, 2vh);
   p {
-    @include mixin.text(
-      center,
-      variables.$color-dark-brown,
-      variables.$font-size-regular,
-      "Ubuntu Medium",
-      1.6rem
-    );
+    @include mixin.text(center, variables.$color-dark-brown, variables.$font-size-regular, "Ubuntu Medium", 1.6rem);
   }
 }
 
@@ -203,32 +169,23 @@ footer {
 }
 
 .contact p {
-  @include mixin.text(
-    center,
-    variables.$text-color,
-    variables.$font-size-regular,
-    "Ubuntu Light",
-    0
-  );
+  @include mixin.text(center, variables.$text-color, variables.$font-size-regular, "Ubuntu Light", 0);
 }
 
 .footer-links {
   @include mixin.flex(flex, column, nowrap, flex-start, ´center, 0, 0);
   a {
-    @include mixin.link(
-      left,
-      variables.$text-color,
-      variables.$font-size-regular,
-      "Ubuntu Regular",
-      none
-    );
+    @include mixin.link(left, variables.$text-color, variables.$font-size-regular, "Ubuntu Regular", none);
     padding-bottom: 2vh;
   }
 }
 
 form {
   width: 30vw;
-  background-color: aqua;
+}
+
+label {
+  @include mixin.text(center, variables.$text-color, 4rem, "Ubuntu Regular", 2vh);
 }
 
 input[type="email"],
@@ -239,12 +196,6 @@ input[type="submit"] {
 }
 
 input[type="email"] {
-  @include mixin.text(
-    left,
-    #000000,
-    variables.$font-size-regular,
-    "Ubuntu Light",
-    0
-  );
+  @include mixin.text(left, #000000, variables.$font-size-regular, "Ubuntu Light", 0);
   padding: 1rem;
 }

@@ -72,6 +72,7 @@ header nav a {
   font-size: 2.4rem;
   font-family: "Ubuntu Medium";
   text-decoration: none;
+  padding-right: 2vw;
 }
 
 .button-1 {
@@ -102,6 +103,7 @@ header nav a {
   background-image: url(../img/hero_image.png);
   background-position: center;
   background-size: cover;
+  margin-bottom: 5vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -252,7 +254,14 @@ footer {
 
 form {
   width: 30vw;
-  background-color: aqua;
+}
+
+label {
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  font-family: "Ubuntu Regular";
+  padding-bottom: 2vh;
 }
 
 input[type=email],
@@ -269,6 +278,4 @@ input[type=email] {
   font-family: "Ubuntu Light";
   padding-bottom: 0;
   padding: 1rem;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
